@@ -1,0 +1,53 @@
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,
+      initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity=
+"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous" />
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet" />
+</head>
+
+<div class="header">
+  <h6 class="display-5"> PORTAL DE NOTICIAS </h6>
+  <h1 class="display-2"> EL NOTICION </h1>
+</div>
+<body>
+  <ul class="users">
+    <form action="/" method="GET">
+      <div class="container-fluid">
+        <% for(var i = 0; i < users.length; i++) { %>
+          <div class="noticia_individual">
+            <!-- Output name from the iterated quote object -->
+            <a> TITULAR </a>
+            <h3><%= users[i].name %></h3>
+            <br>
+            <a> DESCRIPCION </a>
+            <!-- Output quote from the iterated quote object -->
+            <h3><%= users[i].reason %></h3>
+            <br>
+            <a> CATEGORIA </a>
+            <h3><%= users[i].state %></h3>
+            <br>
+            <a> CIUDAD </a>
+            <h3><%= users[i].city %></h3>
+            <br>
+            <a> PERIODICO DE PROCEDENCIA </a>
+            <h3><%= users[i].addressline %></h3>
+          </div>
+        <% } %>
+    </div>
+      <br>
+      <button type="Submit" class="btn btn-outline-info">
+        Agregar otra noticia
+      </button>
+    </form>
+  </ul>
+</body>
