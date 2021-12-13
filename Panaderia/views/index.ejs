@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lag="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+    <title>Panaderia Agustin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        <h1> BIENVENIDO A LA PANADERIA AGUSTIN </h1>
+        </div>
+        <div class="clientes">
+            <h2>LISTA DE CLIENTES</h2>
+            <img src="images/compras.png"  width="100" height="100" alt="">
+            <br><br>
+            <ul class="list-group">
+            <% for(var i = 0; i < clientes.length; i++) { %>
+                <li class="list-group-item"> Nombre del cliente: <%= clientes[i].nombre_cliente %></li>
+                <li class="list-group-item"> Apellidos del cliente: <%= clientes[i].apellidos_cliente %></li>
+                <li class="list-group-item"> Numero del cliente: <%= clientes[i].numero_cliente %></li> <br>
+            <% } %>
+            </ul>
+            <br>
+            <a href="agregar_cliente.html"> Añadir Cliente </a>
+        </div>
+        <br><br>
+        <div class="panes">
+            <h2> LISTA DE TIPOS DE PANES </h2>
+            <img src="images/un-pan.png"  width="100" height="100" alt="">
+            <br><br>
+            <ul class="list-group">
+            <% for(var i = 0; i < tipos.length; i++) { %>
+                <li class="list-group-item"> Nombre del pan: <%= tipos[i].nombre_pan %></li>
+                <li class="list-group-item"> Proveedor del pan: <%= tipos[i].proveedor_pan %></li>
+                <li class="list-group-item"> Pais origen del pan: <%= tipos[i].origen_pan %></li> <br>
+            <% } %>
+            </ul>
+            <br>
+            <a href="agregar_pan.html"> Añadir Tipo de Pan </a>
+        </div>
+        <br><br>
+        <div class="pedidos">
+            <h2>LISTA DE PEDIDOS</h2>
+            <img src="images/pedido-en-linea.png"  width="100" height="100" alt="">
+            <br><br>
+            <ul class="list-group">
+            <% for(var i = 0; i < transacciones.length; i++) { %>
+                <li class="list-group-item"> Nombre del cliente: <%= transacciones[i].nombre_cliente %></li>
+                <li class="list-group-item"> Nombre del pan: <%= transacciones[i].nombre_pan %></li>
+                <li class="list-group-item"> Cantidad de panes: <%= transacciones[i].cantidad_pan %></li> <br>
+            <% } %>
+            </ul>
+            <br>
+            <a href="agregar_pedido.html"> Añadir Pedido </a>
+        </div>
+        <footer>
+            <div class="attribution">
+                Curso de Base de Datos I
+                <a
+                href="https://classroom.google.com/u/1/c/Mzg5NDczNjM0MDg5/a/NDM5OTQ2NTc3NDUy/details"
+                target="_blank"> Laboratorio 6 </a> - Universidad Nacional de San Agustin
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

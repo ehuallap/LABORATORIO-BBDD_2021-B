@@ -1,0 +1,21 @@
+
+<h2> DATOS </h2>
+
+<ul class="users">
+  <form action="/p1" method="GET">
+      <!-- Loop through quotes -->
+    <% for(var i = 0; i < users.length; i++) {%>
+      <li class="users">
+        <!-- Output name from the iterated quote object -->
+        <span><%= users[i].name %></span>----
+        <!-- Output quote from the iterated quote object -->
+        <span><%= users[i].reason %></span>----
+
+        <span><%= users[i].email %></span>----
+
+        <span><%= users[i].city %></span>----
+      </li>
+    <% } %>
+  </form>
+  
+</ul>
